@@ -20,4 +20,3 @@ jobs:
         with:                                # Some relative inputs of your action
           token: ${{ secrets.GITHUB_TOKEN }}
 
-
