@@ -20,8 +20,3 @@ jobs:
         with:                                # Some relative inputs of your action
           token: ${{ secrets.GITHUB_TOKEN }}
 
-
-      # Standard usage
-      - uses:  helaili/jekyll-action@2.0.1
-      env:
-        JEKYLL_PAT: ${{ secrets.JEKYLL_PAT }}
