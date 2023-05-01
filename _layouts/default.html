@@ -1,19 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 
-{% include head.html %}
-
-<body id="page-top">
-	
+{% include post.html %}
+<body id="post">
   {% include nav.html %}
+  <section id="post-content">
+    <div class="container" id="post-content">
+      <title>{{ page.title }}</title>
 
-  <h1>{{ page.title }}</h1>
-    <section>
-      {{ content }}
-    </section>
+    	  {{ content }}
 
-  {% include contact.html %}
-  {% include scripts.html %}
-</body>
-
+  	  </div>
+	</section>
+  </body>
 </html>

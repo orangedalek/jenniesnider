@@ -9,13 +9,13 @@ body {
 }
 
 hr {
-    border-color: $theme-dark;
+    border-color: $theme-primary;
     border-width: 3px;
     max-width: 50px;
 }
 
 hr.light {
-    border-color: white;
+    border-color: $theme-light;
 }
 
 a {
@@ -48,11 +48,15 @@ p {
 
 .bg-dark {
     background-color: $theme-dark;
-    color: white;
+    color: $theme-light;
+}
+.bg-light{
+    background-color: $theme-light;
+
 }
 
 .text-faded {
-    color: rgba(white, .7);
+    color: rgba(white, 7);
 }
 
 section {
@@ -70,7 +74,7 @@ aside {
 // Navigation
 
 .navbar-default {
-    background-color: white;
+    background-color: $theme-light;
     border-color: rgba($theme-dark, .5);
     @include sans-serif-font;
     @include transition-all;
@@ -122,11 +126,11 @@ aside {
         .nav > li > a:focus {
             color: rgba(white, .7);
             &:hover {
-                color: white;
+                color: $theme-light;
             }
         }
         &.affix {
-            background-color: white;
+            background-color: $theme-light;
             border-color: rgba($theme-dark, .5);
             .navbar-header .navbar-brand {
                 color: $theme-primary;
@@ -155,9 +159,9 @@ header {
     min-height: auto;
     @include background-cover;
     background-position: center;
-    background-color: $theme-primary;
+    background-image: url('../img/header.jpg');
     text-align: center;
-    color: white;
+    color: $theme-light;
     .header-content {
         position: relative;
         text-align: center;
@@ -176,7 +180,7 @@ header {
             }
             p {
                 font-weight: 300;
-                color: rgba(white, .7);
+                color: $theme-light;
                 font-size: 16px;
                 margin-bottom: 50px;
             }
@@ -212,6 +216,10 @@ header {
     margin-top: 0;
 }
 
+services {
+        background-color: $theme-light;
+}
+
 .service-box {
     max-width: 400px;
     margin: 50px auto 0;
@@ -229,7 +237,7 @@ header {
     max-width: 650px;
     margin: 0 auto;
     .portfolio-box-caption {
-        color: white;
+        color: $theme-light;
         opacity: 0;
         display: block;
         background: rgba( $theme-primary, .9 );
@@ -297,11 +305,11 @@ header {
 
 // Button Styles
 .btn-default {
-    @include button-variant($theme-dark, white, white);
+    @include button-variant($theme-dark, $theme-light, $theme-light);
 }
 
 .btn-primary {
-    @include button-variant(white, $theme-primary, $theme-primary);
+    @include button-variant($theme-light, $theme-primary, $theme-primary);
 }
 
 .btn {
@@ -325,24 +333,24 @@ header {
 // Extras
 // -- Highlight Color Customization
 ::-moz-selection {
-    color: white;
+    color: $theme-light;
     text-shadow: none;
     background: $theme-dark;
 }
 
 ::selection {
-    color: white;
+    color: $theme-light;
     text-shadow: none;
     background: $theme-dark;
 }
 
 img::selection {
-    color: white;
+    color: $theme-light;
     background: transparent;
 }
 
 img::-moz-selection {
-    color: white;
+    color: $theme-light;
     background: transparent;
 }
 
@@ -350,3 +358,12 @@ body {
     -webkit-tap-highlight-color: $theme-dark;
 }
 
+//Posts
+
+.post-content  {
+    h3 {
+        color: $theme-primary;
+    }
+    
+    
+}
