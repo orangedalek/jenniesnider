@@ -18,6 +18,10 @@ hr.light {
     border-color: $theme-light;
 }
 
+hr.dark {
+    border-color: $theme-dark;
+}
+
 a {
     @include transition-all;
     color: $theme-primary;
